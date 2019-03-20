@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>project</title>
+<style>
+     .tourss{
+         font-family: fantasy;
+        color: white;
+        font-size: 40px;
+        font-style:oblique;
+        text-align: left;
+        top: 100px;
+        left:210px;
+    }
+.book
+{
+  background-color: gainsboro;
+  border: none;
+  color: black;
+  align-content: center;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+    .book1
+{
+  background-color: gainsboro;
+  border: none;
+  color: black;
+  align-content: center;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+        .book2
+{
+  float: right;
+  background-color: gainsboro;
+  border: none;
+  color: black;
+  align-content: center;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+    nav {
+  overflow: hidden;
+display:block;
+border-spacing: inherit;
+word-spacing: normal;
+
+}
+nav a {
+  float:left;
+  color:white;
+  text-align: center;
+  font-style: oblique;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+}
+    </style>
+    </head>
+    <body style="background-image: url(z1.jpg)">
+    <nav>
+    </nav>
+    <h1 style="color:white" size="50px" ><center><b>Book a Tour</b></center></h1>
+    <br>
+<center>
+<a href="booking.php" style="float:right"><button class="book1">My details</button></a><br><br><br><br>
+<a href="end.html" style="float:right"><button class="book1">Next</button></a><br><br><br><br>
+<a href="view.php" style="float:right"><button class="book1">View Packages</button></a>
+</center>
+        
+<div class="tourss">
+    <form name="f" method="get">  
+        <table>
+            <td><tr>
+                Name &nbsp; <input type="text" name="namee" required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tr>
+                Place &nbsp; <input type="text" name="plac" required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gender&nbsp;&nbsp;&nbsp;<input type="radio">Male&nbsp;<input type="radio">Female<br><br></tr>
+                <tr>Age&nbsp;<input type="number" name="agee"></tr>&nbsp;&nbsp;
+        <tr>Total members &nbsp;<input type="number" name="members" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date &nbsp;<input type="datetime-local" name="date" min="2019-03-19T00:00" max="2019-06-19T00:00" ><br><br></tr>
+        <tr>Destination &nbsp;
+            <select name="dest" id="type" onchange="copy();" >
+        <option value="">Select:</option>
+        <option value="France, Paris">France, Paris</option>
+        <option value="USA, Boston">USA, Boston</option>
+        <option value="Italy, Venice">Italy, Venice</option>
+        <option value="Spain, Beridorm">Spain, Beridorm</option>
+        <option value="Egypt, Cairo">Egypt, Cairo</option>
+        <option value="Swiss Alps">Swiss Alps</option>
+        <option value="Czech Republic">Czech Republic</option>
+        <option value="India,Srilanka">India,Srilanka</option>
+            </select></tr>&nbsp;&nbsp;&nbsp;&nbsp;<tr><label>Fare</label>&nbsp;&nbsp;&nbsp;
+                <label name="tot" id="label"></label>
+                </tr>&nbsp;&nbsp;&nbsp;
+            <input type="submit" value="Book tour" onclick="end.html"class="book" id="b" >&nbsp;&nbsp;
+        </td>
+        </table>
+        </form>
+        </div>
+       
+    
+        <script>
+            function copy()
+
+            {
+                var type=document.getElementById("type").value;
+
+                if(type == "France, Paris")
+
+                {
+
+                    document.getElementById("label").innerHTML=8000;
+
+                }
+
+                else if(type == "USA, Boston")
+
+                {
+
+                    document.getElementById("label").innerHTML=5000; 
+
+                }
+
+                else if(type == "Italy, Venice")
+
+                {
+
+                    document.getElementById("label").innerHTML=5700; 
+
+                }
+
+                else if(type == "Spain, Beridorm")
+
+                {
+
+                    document.getElementById("label").innerHTML=7000; 
+
+                }
+                
+                else if(type == "Egypt, Cairo")
+
+                {
+
+                    document.getElementById("label").innerHTML=8000; 
+
+                }
+                
+                else if(type == "Swiss Alps")
+
+                {
+
+                    document.getElementById("label").innerHTML=9000; 
+
+                }
+                 else if(type == "Czech Republic")
+
+                {
+
+                    document.getElementById("label").innerHTML=10000; 
+
+                }
+                 else if(type == "India,Srilanka")
+
+                {
+
+                    document.getElementById("label").innerHTML=6000; 
+
+                }
+
+                else
+
+                {
+
+                    document.getElementById("label").innerHTML="";
+
+                }
+
+            }            
+        </script>
+         </body>
+</html>
+ 

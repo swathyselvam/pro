@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>project</title>
+    </head>
+<style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {font-family: "Times New Roman", Times, serif font-style: "oblique";}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+.slideshow-container {
+  max-width: 2000px;
+  margin:auto;
+  text-align:center;
+  font-style: oblique;
+  color:white;
+  font-size:30;
+}
+body{
+        background-image: linear-gradient(360deg,black 80%,	 black 20%);
+        background-repeat: no-repeat;
+        min-height: 100px;   
+        display: inline;
+        
+    }
+     @media screen and (max-width: 2000px) {
+  body{
+        background-image: linear-gradient(360deg,black 80%,	 black 20%);
+        background-repeat: no-repeat;
+        min-height: 100px;   
+        display: inline;
+        
+    }
+nav {
+  overflow: hidden;
+display:block;
+border-spacing: inherit;
+word-spacing: normal;
+
+}
+    .abt{
+        align-items: flex-start;
+        text-align: left;
+        display: block;
+        font-family:fantasy;
+        font-style:normal;
+        color:white;
+        font-size: 29px;
+        
+    }
+    .logsign{
+        float:right;
+  color:white;
+  text-align: center;
+  font-style: oblique;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+    }
+nav a {
+  float:left;
+  color:white;
+  text-align: center;
+  font-style: oblique;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.logo
+{
+float: right;
+align-content: flex-end;
+text-align: right;
+        
+    }
+    .logsign c{
+  float:right;
+  color:white;
+  text-align: center;
+  font-style: oblique;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.logsign c.hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.logsign c.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .text {
+      font-size: 11px}
+
+}
+* {
+  box-sizing: border-box;
+}
+
+.tc{
+color: white;
+font-size: 20px;
+float: right;
+}
+.topleft{
+font-size: 20px;
+position:absolute;
+text-align:right;
+float:right;
+top:140px;
+left:100px;
+}
+.heading
+{
+text-align:center;
+font-style:oblique;
+color:white;
+font-family: fantasy;
+font-size:50px;
+position:absolute;
+top:180px;
+left:210px;
+}  
+.service
+{
+color: white;
+text-align: center;
+font-size: 40px;
+font-family: fantasy;
+}
+.open-button {
+  background-color: black;
+  color: white;
+  font-family: fantasy;
+  padding: 16px 20px;
+  border: none;
+  font-size: 20px;
+  font-style: oblique;
+  cursor: pointer;
+ float: right;
+         }
+      .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color:darkgrey;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color:white;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel{
+  background-color: black;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+
+<body bgcolor="black">
+<br>
+    <nav>
+  <a class="active" href="#home">Home</a>
+  <a href="#popdest">Popular Destinations</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+<a href="#contact">Contact</a>
+<a href="login.php">Login</a>
+<div class="logsign">
+
+
+    
+    
+<button class="open-button" onclick="openForm()">Admin</button>
+<div class="form-popup" id="myForm">
+  <form action="adminview.php" class="form-container">
+   <h2 style="color: black">Hello Admin</h2>
+    <label for="nam" style="color: black"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="nam" required>
+
+    <label for="psw" style="color: black"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Open</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+</div>
+</nav>
+<div class="logo">
+        <img src="img5.png" width="45%">
+</div>
+<br>
+<div class="slideshow-container">
+<div class="mySlides fade">
+    <center>
+        <img src="korea at night.jpg" width="1200px" height="500px"></center><br><br>
+    <div class="heading" ><i>Almine Tours and Travels</i></div>
+</div>
+</div>
+<div class="mySlides fade">
+    <center>
+        <img src="longon_tower.jpg" width="1200px" height="500px"></center>
+    <div class="heading" ><i>Almine Tours and Travels</i></div>
+
+</div>
+<div class="mySlides fade">
+    <center>
+        <img src="Singapore-Gardens-By-The-Bay.jpg" width="1200px" height="500px"></center>
+<div class="heading" ><i>Almine Tours and Travels</i></div>
+
+</div>
+
+<div>
+<div class="mySlides fade">
+    <center>
+        <img src="Chapel-Bridge,Switzerland.jpg" width="1200px" height="500px"></center>
+<div class="heading" ><i>Almine Tours and Travels</i></div>
+
+</div>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<br><br><br><br>
+<center>
+    <div class="container content padding-64" style="max-width:2000px" id="popdest">
+    <header class="service">Popular Destinations</header><br>
+    <img src="pop.png" width="90%">
+    </div>
+</center>
+    <br><br><br>
+<div class="container content padding-64" style="max-width:2000px" id="about">
+    <div style=" color: white" "font-style: oblique"><h2><center>ABOUT US<br></center> </h2></div>
+<div class="abt"><p>Traveling. Tours. Adventure.We are committed to offering travel services of the highest quality combining our energy and enthusiasm, with our years of experience.Our greatest satisfaction comes in serving large numbers of satisfied clients,this agency has grown to be one of the best ones on the web! All due to the attention each member of our team pays to quality!
+    With the summertime traveling destinations being our specialty we have hundreds of those. So if you want to become our 1 millionth customer by visiting SAR, Israel, Jordan or Greece - simply browse through what we have to offer!</p><br><center><img src="Beach-Resort-Wallpaper-09-2560x1600.jpg" width="1200" height="500"></center>
+ </div>
+    </div>
+<br><br><br>
+    
+<div class="container content padding-64" style="max-width:2000px" id="services"> 
+<br><br>
+    <h2 style="color: white"><center>SERVICES<br><br><br></center></h2>
+    <center><img src="ser2.png" width="90%"></center>
+    <br><br>
+    </div>
+<br><br><br><br>
+<br><br><br><br>
+
+
+<div class="container content padding-64" style="max-width:2000px" id="contact">
+<div style="color: white"> <center><h2>FOR MORE INFORMATION CONTACT US</h2></center></div> <br><br>
+    <center><img src="ct2.png" width="90%"></center><br>
+   <div class="service"><center> Call&nbsp;&nbsp;<img src="phone-icon.png">&nbsp;&nbsp;9906578456 &nbsp; / &nbsp; 8845392021<br>
+    
+    Mail&nbsp;&nbsp;<img src="mail-icon.png">&nbsp;&nbsp;almine@yahoo.com<br>
+    Facebook&nbsp;&nbsp;<img src="facebook-icon.png">&nbsp;&nbsp;almine@facebook.org<br>
+    </center>
+    </div>  
+</div>
+  
+<script>
+var slideIndex = 0;
+showSlides();
+function showSlides() 
+    {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000);
+}
+    /*admin form*/
+    function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+</body>
+</html>

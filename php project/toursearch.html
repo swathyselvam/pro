@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>project</title>
+<style>
+     .tourss{
+         font-family: fantasy;
+        color: white;
+        font-size: 40px;
+        font-style:oblique;
+        text-align: left;
+        top: 100px;
+        left:210px;
+    }
+.book
+{
+  background-color: gainsboro;
+  border: none;
+  color: black;
+  align-content: center;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+    
+    
+    </style>
+    </head>
+    <body style="background-image: url(z1.jpg)">
+        <h1 style="color:white" size="50px" ><center><i><b>BOOK A TOUR</b></i></center></h1>
+        <br>
+<div class="tourss">
+    <form name="f">
+        <table>
+            <td><tr>
+                Name &nbsp; <input type="text" name="namee" required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gender&nbsp;&nbsp;&nbsp;<input type="radio">Male&nbsp;<input type="radio">Female<br><br><br></tr>
+        <tr>Total members &nbsp;<select name="members">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+            </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check-in &nbsp;<input type="date" required><br><br><br></tr><tr>
+        Check-out &nbsp;<input type="date" required></tr>&nbsp;&nbsp;&nbsp;
+                
+        <tr>Destination &nbsp;<select>
+        <option>Singapore</option>
+        <option>Malaysia</option>
+        <option>Dubai</option>
+        <option>Maldives</option>
+        <option>Thailand</option>
+        <option>London</option>
+            </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fare &nbsp;<select name="faree">
+        <option value="$2000">$28000</option>
+        <option value="$39000">$39000</option>
+        <option value="$51000">$51000</option>
+        <option value="$60111">$60111</option>
+            <option value="$72000">$72000</option>
+    <option value="$29000">$29000</option>
+            </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total fare &nbsp;<input type="text" id="total" required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><center><button class="book" id="b" onclick="cal()">Book Tour</button></center><br><br><br><br></tr>
+        </td>
+    </table>
+        </form>
+        </div>
+        <?php
+        if(isset($_GET["b"]))
+        {
+        echo"1234";
+		$conn=mysqli_connect("localhost","root","","PROJECT");
+		$name=$_GET['namee'];
+		$password=$_GET['passwords'];
+        $address=$_GET['address'];
+        $age=$_GET['agee'];
+        $email=$_GET['mail'];
+        $phone=$_GET['phonee'];
+		if(!$conn)
+        {
+            die('could not connect'.mysql_error());
+        }
+		$query="insert into travel(Name,Password,Address,Age,Email,Phone) values('$name','$password','$address','$age','$email','$phone','$submit')";
+		mysqli_query($conn,$query);
+        
+        echo "insertion success";
+        echo $query;
+		
+        }
+	 ?>
+        
+      < script>
+            function cal()
+            {
+                var tot=f.members.value*f.faree.value;
+                var total1=tot;
+                document.getElementById('total').value=total1;
+            }
+        </script>
+    </body>
+</html>
+ 

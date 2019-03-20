@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>project</title>
+</head>
+<style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+nav a {
+  float:center;
+  color:black;
+  text-align: center;
+  font-style: oblique;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+body{
+        background-image: linear-gradient(360deg,wheat 70%,	 wheat 30%);
+        background-repeat: no-repeat;
+        min-height: 100px;   
+        display: inline;
+        
+    }
+    
+     @media screen and (max-width: 2000px) {
+  body{
+        background-image: linear-gradient(360deg,wheat 70%,	 wheat 30%);
+        background-repeat: no-repeat;
+        min-height: 100px;   
+        display: inline;
+        
+    }
+    }
+
+    .heading
+        {
+            font-family: fantasy;
+            font-size: 40px;
+            float: center;
+            text-align: center;
+            
+        }
+    .heading2
+        {
+            font-family: fantasy;
+            font-size: 20px;
+            float: center;
+            text-align: center;
+            color: white;
+        }
+    .book
+{
+  background-color:wheat;
+  border: none;
+  color: black;
+  align-content: center;
+  padding: 15px 32px;
+  text-align: center;
+  font-family: fantasy;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 6px 4px;
+  cursor: pointer;
+}
+    </style>
+<body bgcolor="black">
+    <form name="f" method="get">
+<nav>
+    &nbsp;&nbsp;
+    <a href="plproj.html"><b>Back</b></a>
+        </nav>
+    <div class="heading">
+        <h1 style="color:black">Welcome Admin</h1>
+    </div>
+        <center>
+            <table>
+                <tr>Package Id</tr>&nbsp; <td><tr><input type = "number" name="pkgid" ><br><br></tr>
+                <tr>Package Name</tr>&nbsp; <td><tr><input type = "text" name="pkg" ><br><br></tr>
+                <tr>Package Type</tr>&nbsp;&nbsp;<tr><select name="pkgtype" required><br><br>
+                <option>Holiday packages</option>
+                <option>Summer packages</option>
+                <option>Honeymoon packages</option>
+                <option>Buisness packages</option>
+                </select></tr><br><br>
+                <tr>Days</tr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tr><select name="day" required>
+                <option>2days,3nights</option>
+                <option>3days,4nights</option>
+                <option>4days,5nights </option>
+                <option>more than a week</option>
+                </select></tr><br><br>
+                <tr>Amount</tr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tr><input type="number" name="amt" ></tr><br><br>
+                <tr>Valid till</tr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tr><input type="date" name="valid"></tr></td><br><br>
+                <center><button class="book" id="add" name="add">Add Package</button></center><br>
+                <nav>
+                    <a href="view.php">View details</a> &nbsp;&nbsp;&nbsp;
+                    <a href="delpkg.php">Delete Package</a>&nbsp;&nbsp;
+                    <button class="book2" id="upd" name="upd" >Update Book</button>
+                </nav>
+            </table>
+    </center>
+    </form>
+    
+   
+    </body>
+</html>
+    
+        

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>project</title>
+<style>
+    @media screen and (max-width: 2000px) {
+  body{
+        background-image: linear-gradient(360deg,black 80%,	 black 20%);
+        background-repeat:repeat;
+        min-height: 100px;   
+        display: inline;
+        
+    }
+    div {
+  font-family: fantasy;
+  font-size: 30px;
+  opacity: 0.7;
+  text-decoration-color: brown;
+  align-content: center;
+  background-color: wheat;
+  width: 500px;
+  border: transparent;
+  padding: 30px;
+ margin-top: 100px;
+  margin-left:400px;
+}
+    .errormessage{
+        color: black;
+        font-style: italic;
+    }
+    .errormessage1{
+        font-family:fantasy;
+        color: black;
+        font-style: italic;
+        font-size: 25px;
+    }
+    </style>
+    </head>
+    <body style="background-image: url(log2.jpg)">
+        
+        <div>
+            <h1 style="font-family:fantasy"><center>LOGIN</center></h1>
+            <form method="get" novalidate>
+            <table><tr>
+                <td>Username </td><td><input type="text" name="Username" id="Username" min="5" placeholder="enter username" pattern="[a-zA-Z0-9]{5,50}"required>
+                <span id="err1" class="errormessage1"></span></td></tr>
+                <tr><td>Password</td><td><input type="password" name="passwords" id="passwords" placeholder="enter password" required><span id="err2" class="errormessage1"></span></td></tr>
+                <tr><td colspan="6"><input type="submit" value="Login" id="btnn" name="btnn"></td></tr>
+                <tr><td><p> 
+                    <b><nav>
+                    New user &nbsp;<a href="sign.php" style="color:black"><b>Signup</b></a>
+                    </nav> </b></p></td></tr>
+                </table>   
+            </form>
+            
+
+ <script>
+var btns=document.getElementById('btnn');
+       function checking()
+       {
+           var checkes=1;
+           var names=document.getElementById('Username');
+           if(names.checkValidity)
+	{
+	document.getElementById("err1").innerHTML=names.validationMessage;
+if(names.validationMessage.toString().length!=0)
+    checkes=0;
+	}
+           var pass=document.getElementById('passwords');
+            if(pass.checkValidity)
+	{
+	document.getElementById("err2").innerHTML=pass.validationMessage;
+if(pass.validationMessage.toString().length!=0)
+    checkes=0;
+	}
+           if(checkes==0)
+        {
+            return false;
+        }
+           else{
+               return true;
+           }
+       };
+     btns.onclick=function(e)
+     { 
+           var checkes=checking();   
+                if(checkes==false) {
+                     e.preventDefault();
+                }          
+     };
+            </script>
+        </div>
+    </body>
+</html>
